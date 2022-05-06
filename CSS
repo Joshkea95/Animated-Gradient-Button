@@ -1,0 +1,56 @@
+html {
+  font-size: 10px;
+  background: #d3d3d3;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* The size of our container is 10px taller and wider than the button. This can be changed if you want a slimmer or thicker border */
+
+  height: 60px;
+  width: 110px;
+
+  /* The background of the div element will be the color of our button's "border" you can change these colors to whatever you like */
+
+  background: linear-gradient(
+    45deg,
+    #711c91,
+    #ea00d9,
+    #0abdc6,
+    #13bbb8,
+    #091833,
+    #711c91,
+    #ea00d9
+  );
+
+  /* The background size has been increased so that the entire gradient isn't visible at one time and the animation isn't jarring when it begins */
+
+  background-size: 600%, 100%;
+  border-radius: 5px;
+  animation: animatebg 10s linear infinite;
+}
+
+@keyframes animatebg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+button {
+  position: relative;
+  z-index: 1;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+  border-style: none;
+}
